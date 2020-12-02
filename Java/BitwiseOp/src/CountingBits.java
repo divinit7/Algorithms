@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class CountingBits {
     public static int[] countBits(int num) {
         int[] lis = new int[num + 1];
-        int n, c = 0;
+        int n, c;
 
         for (int i = 0; i < num; i++) {
             c = 0;
