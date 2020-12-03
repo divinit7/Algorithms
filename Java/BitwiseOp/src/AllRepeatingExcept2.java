@@ -19,7 +19,7 @@ public class AllRepeatingExcept2 {
         int rmsb = xor & - xor;
         int x=0,y=0;
         for(int val: arr){
-            if((val & rmsb) == 0 ){
+            if((val & rmsb ) == 0 ){
                 x^= val;
             }
             else
