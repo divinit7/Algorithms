@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.stream.
+
 // Integer.parseUnsignedInt(sb.toString(), 2) - The parseUnsignedInt() is a method of Java Integer class.
 // the second integer is telling it to treat the given number as number base of 2 binary,
 // 8 is octal , 10 is decimal and 16 hexa
