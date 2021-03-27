@@ -8,6 +8,12 @@ public  class subsequences {
     char cc = str.charAt(0);
     String ros = str.substring(1);
     ArrayList<String> myRes = new ArrayList<>();
-    A
+    ArrayList<String> recResult = getSS(ros);
+    for(int i=0; i<recResult.size(); i++){
+        myRes.add(recResult.get(i));
+        myRes.add(cc + recResult.get(i));
+        }
+    return myRes;
     }
+
 }
