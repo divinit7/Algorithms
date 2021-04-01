@@ -1,26 +1,24 @@
 package printRecursion;
 
-// Boolean board-Assume all values on all position to be false
-
-public class nQueens {
+public class printNQueens {
     public static void main(String[] args) {
-        System.out.println(getQueens(new boolean[4][4] , 0));
+        getQueens(new boolean[4][4] , 0, "");
     }
 
-    private static int getQueens(boolean[][] board, int row) {
+    private static void getQueens(boolean[][] board, int row, String result) {
         if (row == board.length){
-            return 1;
+            System.out.println(result);
+            return;
         }
         int count = 0;
         for (int col =0 ; col < board[row].length; col++){
             if (isItSafe(board, row, col)){
                 board[row][col] = true;
-                count = count + getQueens(board, row+1);
+                getQueens(board, row+1, result+"{"+(row+1)+ ","+(col+1)+"}");
                 board[row][col] = false;
             }
 
         }
-        return count;
     }
 
     private static boolean isItSafe(boolean[][] board, int row, int col) {
@@ -38,7 +36,8 @@ public class nQueens {
                 return false;
             }
         }
-    return true;
+        return true;
     }
 
 }
+
